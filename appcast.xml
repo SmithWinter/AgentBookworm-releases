@@ -1,8 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
     <channel>
         <title>Agent Bookworm</title>
         <link>https://github.com/SmithWinter/VibeBookworm-releases/releases</link>
         <language>en</language>
+        <item>
+            <title>1.0.0-beta.4</title>
+            <pubDate>Tue, 17 Nov 2026 15:35:08 +0700</pubDate>
+            <sparkle:version>133</sparkle:version>
+            <sparkle:shortVersionString>1.0.0-beta.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[Agent Bookworm now updates itself, and the duplicate screen can drop a bookmark from every export in one step.
+
+### New
+
+- **Automatic updates.** Agent Bookworm checks for new versions once a day and installs them for you. Use **Check for Updates…** in the app menu to check now, or turn automatic checks off in Settings.
+- **Drop all copies of a duplicate.** Each duplicate group has a **Drop all** button next to **Keep selected copies**. It removes every copy of that bookmark from the exported HTML after you confirm. The bookmark stays in your library.
+
+### Fixed
+
+- **One row per browser.** Safari no longer shows up twice in the sidebar after a file import, and Chrome no longer gets a second row when you add another Chrome profile. Existing duplicate rows are merged on first launch, and your library is backed up before that happens.
+- **Bookmark counts for every browser.** Browser profiles showed "Not connected" and no count. Every profile now shows how many bookmarks it holds.
+- **"Core Engine Unavailable" after a hiccup.** The app reconnects to its engine on its own instead of showing the banner the moment the connection drops.
+- **Engine restart loop.** Opening the app while an older engine was still running could restart the engine over and over. That no longer happens.
+- **No more lost bookmarks when two profiles share a name.** Importing a profile whose name matched another browser's profile could replace that profile's bookmarks. Each profile now keeps its own.
+]]></description>
+            <enclosure url="https://github.com/SmithWinter/VibeBookworm-releases/releases/download/v1.0.0-beta.4/Agent-Bookworm-1.0.0-beta.4.dmg" length="7949063" type="application/octet-stream" sparkle:edSignature="x4A5/VMTU2fSEcZa8zRCs9fTv0GXcc3WzBeVtV8EiqaSlRDh5rlOu9DE+xb+pnSmKm8m3Kb3H0tGkRJ8ZPBhDg=="/>
+        </item>
     </channel>
 </rss>
