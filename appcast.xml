@@ -5,6 +5,27 @@
         <link>https://github.com/SmithWinter/VibeBookworm-releases/releases</link>
         <language>en</language>
         <item>
+            <title>1.0.0-beta.5</title>
+            <pubDate>Tue, 17 Nov 2026 18:23:49 +0700</pubDate>
+            <sparkle:version>136</sparkle:version>
+            <sparkle:shortVersionString>1.0.0-beta.5</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[Redirect suggestions from Health Scan can now be reviewed in full and applied to your library, and the Confirm suggestion and Not related buttons respond again.
+
+### New
+
+- **Preview before applying a redirect.** After you confirm suggestions on Health Scan, **Preview & apply** lists every affected bookmark: its title, the URL it has today, the new URL, the browser profile and folder, why the redirect was suggested and what the scan saw, and whether it can be changed. Tick the ones you want, confirm, and see the result for each. **Undo** puts the old URLs back.
+- **Changes reach Safari through export.** Repairs are made in your Agent Bookworm library; Safari's own bookmark file is never touched. Use **Export HTML** after applying and import that file into Safari. A repair stays in place when the app rescans Safari, and an undone repair stays undone.
+- **Two counts on Health Scan in the sidebar.** One shows redirect suggestions waiting for you, the other likely-dead links.
+
+### Fixed
+
+- **Confirm suggestion and Not related did nothing.** Confirming saved the redirect but left the card on screen, and any further press failed silently. Cards now disappear once you decide, buttons are disabled while a decision is saved, and errors are shown instead of dropped.
+]]></description>
+            <enclosure url="https://github.com/SmithWinter/VibeBookworm-releases/releases/download/v1.0.0-beta.5/Agent-Bookworm-1.0.0-beta.5.dmg" length="8090586" type="application/octet-stream" sparkle:edSignature="zdr1cPwMU/eUFYwuHooErZjf+ZXwzKA2lMN9HlELELArac8BJwQ/14qMem4WXPH2Mww8jJa6W17DQA4gq0GEBQ=="/>
+        </item>
+        <item>
             <title>1.0.0-beta.4</title>
             <pubDate>Tue, 17 Nov 2026 15:35:08 +0700</pubDate>
             <sparkle:version>133</sparkle:version>
