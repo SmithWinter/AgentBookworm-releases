@@ -5,6 +5,31 @@
         <link>https://github.com/SmithWinter/VibeBookworm-releases/releases</link>
         <language>en</language>
         <item>
+            <title>1.0.0-beta.6</title>
+            <pubDate>Thu, 19 Nov 2026 11:16:04 +0700</pubDate>
+            <sparkle:version>141</sparkle:version>
+            <sparkle:shortVersionString>1.0.0-beta.6</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[The app no longer freezes while a plan is being applied, the core stops leaking a connection every time one closes, and the Safari extension builds and carries the entitlement Safari requires.
+
+### Fixed
+
+- **The app stays responsive while a plan is applied.** Applying a plan held the single database lock for the whole operation, including every call to the browser. One plan covering twenty bookmarks could stall every other screen for minutes. The lock is now held only while the app writes, and a separate guard keeps two plans from writing to the same browser profile at once.
+- **The core no longer leaks a connection.** Every closed connection left a task and both socket halves behind, because the writer task was awaited before its senders were dropped. A long session accumulated them.
+- **A queued change is no longer dropped.** When the browser answered `success: false`, the queued mutation was deleted as though it had worked. It now stays queued and is retried.
+- **The connection banner says why the core stopped.** It showed only the title; the reason is now visible.
+- **No plaintext copy of encrypted rows is left behind.** The pre-migration backup was kept forever, including the rows migration 3 encrypts. It is now removed once every migration commits, and kept only when one fails.
+- **The Safari extension builds again.** Packaging assembles the appex with `swiftc` instead of `xcodebuild` on a project that has no `project.pbxproj`, so `package-app.sh` reaches the DMG again, and the bundle carries the sandbox entitlement Safari requires.
+
+### New
+
+- **Every check runs on every push.** CI runs `check-all.sh` on each push and pull request, and packages the app on a tag.
+- **The Safari extension and the workflow are checked automatically.** `check-all.sh` builds the extension and verifies what Safari needs — the bundle id extends the app's, the principal class is really in the binary, the signature seals `Info.plist`, the sandbox entitlement is present — and rejects a workflow with an unknown runner label, an unpinned action or a missing script.
+]]></description>
+            <enclosure url="https://github.com/SmithWinter/VibeBookworm-releases/releases/download/v1.0.0-beta.6/Agent-Bookworm-1.0.0-beta.6.dmg" length="8109130" type="application/octet-stream" sparkle:edSignature="ErE+DHzkOeeZwUGmDVoriu0cy/iNdGD+4YiBvZR2EkirMDJK6a4qo3+sCtnrCFAvX+S5eado/ZGCGCiatjGgCA=="/>
+        </item>
+        <item>
             <title>1.0.0-beta.5</title>
             <pubDate>Tue, 17 Nov 2026 18:23:49 +0700</pubDate>
             <sparkle:version>136</sparkle:version>
